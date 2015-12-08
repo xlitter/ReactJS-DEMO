@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bulid": "webpack",
+    "build": "webpack",
     "start": "webpack-dev-server --hot --inline"
   },
   "author": "",
@@ -19,6 +19,9 @@
     "babel-loader": "^6.2.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-plugin-react": "^3.11.3",
     "html-webpack-plugin": "^1.7.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"

@@ -1,0 +1,10 @@
+{
+	"extends": "airbnb",
+  "rules": {
+    "one-var": [2, {
+      "var": "always",
+      "let": "never",
+      "const": "never"
+    }]
+  }
+}
