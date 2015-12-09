@@ -1,1 +1,1 @@
-ReactJS DEMO
+ReactJS ES6 DEMO 
