@@ -1,10 +1,17 @@
 {
-	"extends": "airbnb",
+  "extends": "airbnb",
   "rules": {
-    "one-var": [2, {
-      "var": "always",
-      "let": "never",
-      "const": "never"
-    }]
+    "one-var": [
+      2,
+      {
+        "var": "always",
+        "let": "never",
+        "const": "never"
+      }
+    ],
+    "comma-dangle": [
+      2,
+      "never"
+    ]
   }
 }
