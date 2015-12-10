@@ -1,4 +1,4 @@
-import React, { Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class Demo12 extends Component {
 
@@ -63,8 +63,8 @@ class Demo12 extends Component {
 }
 
 Demo12.propTypes = {
-  promise: () => {
-    console.log(arguments);
+  promise: (props, propName, componentName) => {
+    console.log(`props ${ props }, propName: ${propName}, componentName: ${componentName}`);
   }
 };
 

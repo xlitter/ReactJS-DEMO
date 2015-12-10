@@ -11,11 +11,16 @@ import Demo8 from './Demo8.jsx';
 import Demo9 from './Demo9.jsx';
 import Demo10 from './Demo10.jsx';
 // import Demo11 from './Demo11.jsx';
-import Demo12 from './Demo12.jsx';
+// import Demo12 from './Demo12.jsx';
+import Demo13 from './Demo13.jsx';
 
-const gistUrl = 'https://api.github.com/users/octocat/gists';
-const starUrl = 'https://api.github.com/search/repositories?q=javascript&sort=stars';
+// const gistUrl = 'https://api.github.com/users/octocat/gists';
+// const starUrl = 'https://api.github.com/search/repositories?q=javascript&sort=stars';
 
+/*
+  stateless component
+  link : http://facebook.github.io/react/docs/reusable-components.html#stateless-functions
+*/
 export default ()=>{
   return (
     <div>
@@ -55,11 +60,13 @@ export default ()=>{
       {/*
         <h2>Demo11</h2>
         <Demo11 source={gistUrl} />
+
+        <h2>Demo12</h2>
+        <Demo12 promise={$.getJSON(starUrl)}/>
       */}
 
-      <h2>Demo12</h2>
-      <Demo12 promise={$.getJSON(starUrl)}/>
-
+      <h2>Demo13</h2>
+      <Demo13 />
     </div>
   );
 };
