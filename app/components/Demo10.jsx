@@ -18,7 +18,7 @@ class Demo10 extends Component {
       this.setState({ opacity: opacity });
     }, 100);
   }
-
+  
   componentWillUnmount() {
     if (this.timer) {
       clearInterval(this.timer);
