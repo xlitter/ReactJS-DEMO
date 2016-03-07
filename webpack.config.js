@@ -30,7 +30,7 @@ module.exports = {
 
   devServer: {
     // 设置index.html页面所在目录
-    'contentBase': 'dist',
+    'contentBase': '.',
     'historyApiFallback': true,
     'hot': true,
     'inline': true,

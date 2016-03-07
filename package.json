@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "description": "reactjs-example",
   "main": "index.js",
+  "_scripts_operator_commet &&":"http://substack.net/task_automation_with_npm_run",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --hot --inline"
+    "server": "webpack-dev-server --hot --inline",
+    "start": "npm run build && npm run server"
   },
   "author": "",
   "license": "ISC",
