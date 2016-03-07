@@ -8,6 +8,11 @@ class Demo14 extends Component {
     super();
     this.state = { inputValue: '' };
     this.handleClick = this.handleClick.bind(this);
+    this.updateInput = this.updateInput.bind(this);
+  }
+
+  updateInput(value) {
+    this.setState({ inputValue: value });
   }
 
   handleClick() {
@@ -17,7 +22,8 @@ class Demo14 extends Component {
   render() {
     return (
       <div>
-       <TextInput data={this.state.inputValue} />
+       <TextInput data={this.state.inputValue} update={this.updateInput} />
+        <p>TextInput value: {this.state.inputValue}</p>
         <button onClick={this.handleClick}>demo14 click</button>
       </div>
 

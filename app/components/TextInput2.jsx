@@ -8,14 +8,16 @@ class TextInput2 extends Component {
     this.change = this.change.bind(this);
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     if (nextProps.data !== this.state.value) {
       this.setState({ value: nextProps.data });
     }
   }
 
   change(e) {
-    this.setState({ value: e.target.value });
+    const newVal = e.target.value;
+    this.setState({ value: newVal });
+    this.props.update(newVal);
   }
 
   render() {
@@ -29,7 +31,8 @@ class TextInput2 extends Component {
 }
 
 TextInput2.propTypes = {
-  data: React.PropTypes.string
+  data: React.PropTypes.string,
+  update: React.PropTypes.function
 };
 
 export default TextInput2;
