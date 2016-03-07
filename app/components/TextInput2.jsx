@@ -32,7 +32,7 @@ class TextInput2 extends Component {
 
 TextInput2.propTypes = {
   data: React.PropTypes.string,
-  update: React.PropTypes.function
+  update: React.PropTypes.func
 };
 
 export default TextInput2;
