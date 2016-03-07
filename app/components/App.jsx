@@ -14,6 +14,8 @@ import Demo10 from './Demo10.jsx';
 // import Demo12 from './Demo12.jsx';
 import Demo13 from './Demo13.jsx';
 
+import Demo14 from './Demo14.jsx';
+
 // const gistUrl = 'https://api.github.com/users/octocat/gists';
 // const starUrl = 'https://api.github.com/search/repositories?q=javascript&sort=stars';
 
@@ -67,6 +69,10 @@ export default ()=>{
 
       <h2>Demo13</h2>
       <Demo13 />
+      
+      
+      <h2>Demo14</h2>
+      <Demo14 />
     </div>
   );
 };
