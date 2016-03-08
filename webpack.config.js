@@ -8,9 +8,7 @@ const APP_PATH = path.resolve(ROOT_PATH, 'app');
 const DIST_PATH = path.resolve(ROOT_PATH, 'dist');
 
 module.exports = {
-  entry: [
-    `${APP_PATH}/index.jsx`
-  ],
+  entry: `${APP_PATH}/index.jsx`,
   output: {
     path: DIST_PATH,
     filename: '[name].js'
@@ -30,7 +28,7 @@ module.exports = {
 
   devServer: {
     // 设置index.html页面所在目录
-    'contentBase': '.',
+    'contentBase': 'dist',
     'historyApiFallback': true,
     'hot': true,
     'inline': true,

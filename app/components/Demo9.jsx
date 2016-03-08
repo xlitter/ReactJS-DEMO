@@ -4,6 +4,7 @@ class Demo9 extends Component {
   constructor(props) {
     super(props);
     this.state = { value: 'Hello' };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(/* e*/) {
@@ -15,7 +16,7 @@ class Demo9 extends Component {
     const value = this.state.value;
     return (
       <div>
-        <input type="text" value={ value } ref="input" onChange={(e)=>{ this.handleChange(e); }} />
+        <input type="text" value={ value } ref="input" onChange={ this.handleChange } />
         <p>{ value }</p>
       </div>
     );

@@ -7,7 +7,7 @@ class Demo10 extends Component {
   }
   componentDidMount() {
     let operate = -1;
-    this.timer = setInterval(()=>{
+    this.timer = setInterval(() => {
       let opacity = this.state.opacity;
       opacity += 0.05 * operate;
       if (opacity < 0.1) {
@@ -15,10 +15,10 @@ class Demo10 extends Component {
       } else if (opacity > 0.9) {
         operate = -1;
       }
-      this.setState({ opacity: opacity });
+      this.setState({ opacity });
     }, 100);
   }
-  
+
   componentWillUnmount() {
     if (this.timer) {
       clearInterval(this.timer);
@@ -28,9 +28,9 @@ class Demo10 extends Component {
   render() {
     const opacity = this.state.opacity;
     return (
-       <div style={{ opacity: opacity }}>
-         Hello {this.props.name}!
-       </div>
+      <div style={{ opacity }}>
+        Hello {this.props.name}!
+      </div>
     );
   }
 }

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "reactjs-example",
   "main": "index.js",
-  "_scripts_operator_commet &&":"http://substack.net/task_automation_with_npm_run",
+  "_scripts_operator_commet &&": "http://substack.net/task_automation_with_npm_run",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
@@ -22,8 +22,6 @@
     "babel-loader": "^6.2.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "eslint-config-airbnb": "^2.0.0",
-    "eslint-plugin-react": "^3.11.3",
     "html-webpack-plugin": "^1.7.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"

@@ -22,7 +22,7 @@ class Demo14 extends Component {
   render() {
     return (
       <div>
-       <TextInput data={this.state.inputValue} update={this.updateInput} />
+        <TextInput data={this.state.inputValue} update={this.updateInput} />
         <p>TextInput value: {this.state.inputValue}</p>
         <button onClick={this.handleClick}>demo14 click</button>
       </div>

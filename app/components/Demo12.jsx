@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 class Demo12 extends Component {
 
@@ -12,17 +12,12 @@ class Demo12 extends Component {
   }
 
   componentDidMount() {
-    this.props.promise.then((data)=>{
-      return {
-        data: data
-      };
-    }, (err)=>{
-      return {
-        error: err
-      };
-    }).then((data)=>{
-      data.loading = false;
-      this.setState(data);
+    this.props.promise.then((data) => ({
+      data
+    }), (err) => ({
+      error: err
+    })).then((data) => {
+      this.setState({ data: data.data, loading: false, error: data.error });
     });
   }
 
@@ -32,8 +27,8 @@ class Demo12 extends Component {
 
     if (state.loading) {
       html = <span>loading...</span>;
-    } else if (state.error !== null) {
-      html = <span>Error: {this.state.error.message}</span>;
+    } else if (state.error !== null && state.error !== undefined) {
+      html = <span>Error: {state.error.message}</span>;
     } else {
       const items = state.data.items;
       html = (
@@ -46,7 +41,7 @@ class Demo12 extends Component {
                   <li key={idx}>
                     <a href={item.html_url}>{item.name}</a>
                     ({item.stargazers_count } stars)
-                    <br/>
+                    <br />
                     { item.description }
                   </li>
                 );
@@ -64,7 +59,7 @@ class Demo12 extends Component {
 
 Demo12.propTypes = {
   promise: (props, propName, componentName) => {
-    console.log(`props ${ props }, propName: ${propName}, componentName: ${componentName}`);
+    console.log(`props ${props}, propName: ${propName}, componentName: ${componentName}`);
   }
 };
 
